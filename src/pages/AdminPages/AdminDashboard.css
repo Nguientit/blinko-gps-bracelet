@@ -1,0 +1,289 @@
+/* ===== Admin Container ===== */
+.pmx-admin-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #f5f7fa;
+}
+
+/* ===== Main Layout ===== */
+.pmx-admin-main {
+  display: flex;
+  flex: 1;
+  min-height: calc(100vh - 80px);
+  overflow: hidden;
+}
+
+/* ===== Sidebar ===== */
+.pmx-sidebar {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  width: 60px;
+  height: calc(100vh - 60px);
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+  box-sizing: border-box;
+  transition: width 0.3s ease;
+  overflow-x: hidden;
+  z-index: 5;
+  border-right: 1px solid #485c96;
+}
+
+.pmx-sidebar:hover {
+  width: 220px;
+}
+
+.sidebar-header {
+  display: none;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.pmx-sidebar:hover .sidebar-header {
+  display: block;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+/* ===== Sidebar Buttons ===== */
+.pmx-sidebar-btn {
+  background: none;
+  border: none;
+  color: #ffffff;
+  padding: 12px 10px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.2s ease;
+  width: 40px;
+  justify-content: center;
+}
+
+.pmx-sidebar:hover .pmx-sidebar-btn {
+  width: 100%;
+  justify-content: flex-start;
+  padding: 12px 16px;
+}
+
+.pmx-sidebar-btn:hover,
+.pmx-sidebar-btn.active {
+  background: #485c96;
+  color: white;
+  transform: translateX(2px);
+}
+
+.pmx-sidebar-btn span {
+  display: none;
+}
+
+.pmx-sidebar:hover .pmx-sidebar-btn span {
+  display: inline;
+}
+
+.sidebar-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.pmx-sidebar-btn.logout {
+  color: #ff6b6b;
+}
+
+.pmx-sidebar-btn.logout:hover {
+  background: #ff6b6b;
+  color: white;
+}
+
+/* ===== Admin Content ===== */
+.pmx-admin-content {
+  flex: 1;
+  margin-left: 60px;
+  padding: 30px;
+  background: #f5f7fa;
+  overflow-y: auto;
+  transition: margin-left 0.3s ease;
+}
+
+.pmx-sidebar:hover ~ .pmx-admin-content {
+  margin-left: 220px;
+}
+
+.admin-header {
+  margin-bottom: 30px;
+}
+
+.admin-header h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+}
+
+.admin-header p {
+  color: #666;
+  font-size: 14px;
+}
+
+.admin-content-placeholder {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  text-align: center;
+  color: #999;
+  font-size: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .pmx-sidebar {
+    width: 50px;
+  }
+
+  .pmx-sidebar:hover {
+    width: 180px;
+  }
+
+  .pmx-admin-content {
+    margin-left: 50px;
+    padding: 20px;
+  }
+
+  .pmx-sidebar:hover ~ .pmx-admin-content {
+    margin-left: 180px;
+  }
+}
+
+/* ===== Admin Dashboard Shared Styles ===== */
+
+.managerSection {
+  background: #f8fafc;
+  padding: 40px;
+  font-family: "Inter", sans-serif;
+  color: #1a1a1a;
+}
+
+.managerSection h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  color: #1a1a1a;
+}
+
+.managerSection > p {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+/* Revenue Summary Card */
+.revenueSummaryCard {
+  background: linear-gradient(135deg, #485c96 0%, #3a4a7a 100%);
+  color: white;
+  padding: 24px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 12px rgba(72, 92, 150, 0.2);
+}
+
+.revenueSummaryCard h3 {
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0 0 12px 0;
+  opacity: 0.9;
+}
+
+.totalRevenue {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+/* Table Container */
+.tableContainer {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  overflow-x: auto;
+}
+
+.userTable {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.userTable th {
+  background: #f5f7fa;
+  padding: 14px !important; 
+  border-bottom: 1px solid #e0e0e0;
+  text-align: left;
+  font-weight: 600;
+  font-size: 14px;
+  color: #1a1a1a;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.userTable td {
+  padding: 14px !important;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 14px;
+  color: #666;
+}
+
+.userTable tr:hover {
+  background: #f9fafb;
+}
+
+.revenueAmount {
+  font-weight: 600;
+  color: #485c96;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .managerSection {
+    padding: 20px;
+  }
+
+  .managerSection h1 {
+    font-size: 24px;
+  }
+
+  .revenueSummaryCard {
+    padding: 16px;
+  }
+
+  .totalRevenue {
+    font-size: 24px;
+  }
+
+  .userTable th,
+  .userTable td {
+    padding: 10px;
+    font-size: 12px;
+  }
+}

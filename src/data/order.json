@@ -1,0 +1,155 @@
+{
+  "orders": [
+    {
+      "id": "order-1761071158509",
+      "userId": "user-1759820809612",
+      "customer": "Nguyễn Văn Anh",
+      "email": "vana@gmail.com",
+      "phone": "0123456789",
+      "address": "123 Đường Lê Lợi, Quận 1, TP.HCM",
+      "payment": "Thanh toán khi nhận hàng (COD)",
+      "status": "Đã thanh toán",
+      "items": [
+        {
+          "productId": "1",
+          "name": "Blinko Play",
+          "variant": "Play Blue",
+          "variantImage": "https://down-vn.img.susercontent.com/file/cn-11134207-7ras8-m6o6k67lkzgr65.webp",
+          "quantity": 2,
+          "price": 152000
+        },
+        {
+          "productId": "5",
+          "name": "Blinko Essential",
+          "variant": "Essential Rainbow",
+          "variantImage": "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-m07hou0jpjhp15.webp",
+          "quantity": 1,
+          "price": 182000
+        }
+      ],
+      "total": 486000,
+      "createdAt": "2025-10-20T10:32:00Z"
+    },
+    {
+      "id": "order-1761071718143",
+      "userId": "user-1760684159086",
+      "customer": "Trần Thị Bình",
+      "email": "btran@gmail.com",
+      "phone": "0123456789",
+      "address": "45 Nguyễn Huệ, Quận 1, TP.HCM",
+      "payment": "Đã thanh toán qua Momo",
+      "status": "Đã giao",
+      "items": [
+        {
+          "productId": "2",
+          "name": "Blinko Toons",
+          "variant": "Toons Pony",
+          "variantImage": "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lxcuv4a4fkrdf5@resize_w900_nl.webp",
+          "quantity": 1,
+          "price": 142000
+        }
+      ],
+      "total": 142000,
+      "createdAt": "2025-10-19T09:00:00Z"
+    },
+    {
+      "id": "order-1761072536414",
+      "userId": "user-1760981555300",
+      "customer": "Phạm Quốc Cường",
+      "email": "cuongpham@gmail.com",
+      "phone": "0987654321",
+      "address": "88 Lý Thường Kiệt, Hà Nội",
+      "payment": "Thanh toán khi nhận hàng (COD)",
+      "status": "Đã thanh toán",
+      "items": [
+        {
+          "productId": "4",
+          "name": "Blinko Active",
+          "variant": "Active Blue Shark",
+          "variantImage": "https://i.postimg.cc/Znhj8VHm/Blinko-Active.png",
+          "quantity": 1,
+          "price": 191000
+        }
+      ],
+      "total": 191000,
+      "createdAt": "2025-10-18T08:15:00Z"
+    },
+    {
+      "id": "order-1761204131926",
+      "userId": "user-1760981578900",
+      "customer": "Pham Nguyen",
+      "email": "nguyenpq65@gmail.com",
+      "phone": "0909123456",
+      "address": "107 Mạc Đĩnh Chi, Phường Lê Thanh Nghị, Thành phố Hải Dương, Tỉnh Hải Dương",
+      "payment": "Thanh toán khi nhận hàng (COD)",
+      "status": "Chờ xác nhận",
+      "items": [
+        {
+          "productId": "6",
+          "name": "Blinko Fit",
+          "variant": "Fit Purple",
+          "variantImage": "https://down-vn.img.susercontent.com/file/cn-11134207-7ras8-mb6dmdlvrscla5.webp",
+          "quantity": 1,
+          "price": 168000
+        }
+      ],
+      "total": 198000,
+      "note": "giao hàng cẩn thận giúp em nhé",
+      "createdAt": "2025-10-23T07:22:11.926Z"
+    },
+    {
+      "id": "order-1761367739239",
+      "userId": "user-1760981578900",
+      "customer": "Pham Nguyen",
+      "email": "nguyenpq65@gmail.com",
+      "phone": "0909123456",
+      "address": "Cổng Thiên Đường Bảo Sơn, Phường Vạn Phúc, Quận Hà Đông, Thành phố Hà Nội",
+      "payment": "Thanh toán khi nhận hàng (COD)",
+      "status": "Chờ xác nhận",
+      "items": [
+        {
+          "productId": "2",
+          "name": "Blinko Toonsssss",
+          "variant": "Toons Astronaut",
+          "variantImage": "https://down-vn.img.susercontent.com/file/vn-11134207-7ras8-maqn1gqim5xo01@resize_w900_nl.webp",
+          "quantity": 1,
+          "price": 142000
+        },
+        {
+          "productId": "5",
+          "name": "Blinko Essential",
+          "variant": "Essential Rainbow Special",
+          "variantImage": "https://down-vn.img.susercontent.com/file/5ac5002dd3636038de1569c121abbf66@resize_w900_nl.webp",
+          "quantity": 1,
+          "price": 182000
+        }
+      ],
+      "total": 354000,
+      "note": "giao hàng cẩn thận giúp em nhé",
+      "createdAt": "2025-10-25T04:48:59.239Z"
+    },
+    {
+      "id": "order-1761371405594",
+      "userId": "user-1761329360554",
+      "customer": "Phạm Nguyên",
+      "email": "nguyenpq0605@gmail.com",
+      "phone": "0934297476",
+      "address": "234 ngõ 456, Phường Long Biên, Quận Long Biên, Thành phố Hà Nội",
+      "payment": "Chuyển khoản ngân hàng",
+      "status": "Chờ xác nhận",
+      "items": [
+        {
+          "productId": "4",
+          "name": "Blinko Active",
+          "variant": "Active Yellow Dinosaur",
+          "variantImage": "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lxcuv5zzyfh7cc@resize_w900_nl.webp",
+          "quantity": 1,
+          "price": 191000
+        }
+      ],
+      "total": 221000,
+      "note": "Giao hàng cẩn thận giúp mình nhé",
+      "createdAt": "2025-10-25T05:50:05.594Z"
+    }
+  ]
+}

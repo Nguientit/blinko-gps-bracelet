@@ -1,0 +1,348 @@
+.order-container {
+  padding: 32px;
+  background: #f8f9fb;
+  min-height: 100vh;
+  color: #1a1a1a;
+}
+
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+/* Increased h1 font size from 28px to 32px */
+.order-header h1 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+  color: #1a1a1a;
+  letter-spacing: -0.5px;
+}
+
+.order-header p {
+  color: #666;
+  font-size: 14px;
+}
+
+.order-export-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: #485c96;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.order-export-btn:hover {
+  background: #3a4a7a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(72, 92, 150, 0.3);
+}
+
+.order-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  padding: 8px 14px;
+  border: 1px solid #e0e0e0;
+  background: white;
+  cursor: pointer;
+  border-radius: 6px;
+  /* Increased font size from 13px to 14px */
+  font-size: 14px;
+  font-weight: 500;
+  color: #666;
+  transition: all 0.2s ease;
+}
+
+.tab-btn:hover {
+  border-color: #485c96;
+  color: #485c96;
+}
+
+.tab-btn.active {
+  background: #485c96;
+  color: white;
+  border-color: #485c96;
+}
+
+.order-table-wrapper {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  overflow-x: auto;
+}
+
+.order-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  table-layout: fixed;
+}
+
+.order-table th {
+  background: #f5f7fa;
+  padding: 14px;
+  border-bottom: 1px solid #e0e0e0;
+  text-align: left;
+  font-weight: 600;
+  /* Increased font size from 13px to 14px */
+  font-size: 14px;
+  color: #1a1a1a;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  word-break: break-word;
+}
+
+.order-table th:nth-child(1) {
+  width: 11%;
+}
+
+/* Mã đơn */
+.order-table th:nth-child(2) {
+  width: 13%;
+}
+
+/* Khách hàng */
+.order-table th:nth-child(3) {
+  width: 18%;
+}
+
+/* Địa chỉ */
+.order-table th:nth-child(4) {
+  width: 12%;
+}
+
+/* Thanh toán */
+.order-table th:nth-child(5) {
+  width: 12%;
+}
+
+/* Trạng thái */
+.order-table th:nth-child(6) {
+  width: 10%;
+}
+
+/* Tổng tiền */
+.order-table th:nth-child(7) {
+  width: 10%;
+}
+
+/* Ngày tạo */
+.order-table th:nth-child(8) {
+  width: 14%;
+}
+
+/* Hành động */
+
+.order-table td {
+  padding: 14px;
+  border-bottom: 1px solid #f0f0f0;
+  /* Increased font size from 13px to 14px */
+  font-size: 14px;
+  color: #666;
+}
+
+.order-id {
+  font-weight: 600;
+  color: #485c96;
+}
+
+.customer-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.customer-name {
+  font-weight: 500;
+  color: #1a1a1a;
+}
+
+.customer-email {
+  font-size: 12px;
+  color: #999;
+}
+
+.order-total {
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.order-date-pmx {
+  font-size: 12px;
+  color: #999;
+}
+
+.status-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.status-tag.đã-giao,
+.status-tag.delivered {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status-tag.đã-hủy,
+.status-tag.cancelled {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.status-tag.đã-thanh-toán,
+.status-tag.confirmed {
+  background: #cce5ff;
+  color: #004085;
+}
+
+.status-tag.chờ-xác-nhận,
+.status-tag.pending {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.status-tag.đang-giao-hàng,
+.status-tag.delivering {
+  background: #d1ecf1;
+  color: #0c5460;
+}
+
+.status-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.product-detail-row {
+  background: #fafbfc;
+}
+
+.product-detail-box {
+  padding: 16px;
+}
+
+.product-detail-box h4 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 12px;
+}
+
+.item-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 8px;
+}
+
+.item-table th {
+  background: white;
+  padding: 8px;
+  border-bottom: 1px solid #e0e0e0;
+  text-align: left;
+  font-weight: 600;
+  font-size: 12px;
+  color: #666;
+}
+
+.item-table td {
+  padding: 8px;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 12px;
+}
+
+.item-thumb-small {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
+}
+
+.action-group {
+  display: flex;
+  gap: 6px;
+}
+
+.action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 12px;
+  display: flex;
+}
+
+.action-btn.confirm {
+  background: #d4edda;
+  color: #155724;
+}
+
+.action-btn.confirm:hover {
+  background: #c3e6cb;
+  transform: translateY(-2px);
+}
+
+.action-btn.deliver {
+  background: #d1ecf1;
+  color: #0c5460;
+}
+
+.action-btn.deliver:hover {
+  background: #bee5eb;
+  transform: translateY(-2px);
+}
+
+.action-btn.cancel {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.action-btn.cancel:hover {
+  background: #f5c6cb;
+  transform: translateY(-2px);
+}
+
+.order-note {
+  margin-top: 20px;
+  font-size: 12px;
+  color: #999;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .order-table {
+    font-size: 12px;
+  }
+
+  .order-table th,
+  .order-table td {
+    padding: 10px;
+  }
+
+  .action-btn {
+    width: 28px;
+    height: 28px;
+  }
+}

@@ -1,0 +1,605 @@
+/* ============================================
+   BlinkoBot Chat Component Styles
+   ============================================ */
+
+:root {
+  --blinko-primary: #39c8bb;
+  --blinko-primary-dark: #2ba89a;
+  --blinko-primary-light: #5dd9cc;
+  --blinko-accent: #b4f854;
+  --blinko-accent-dark: #9dd63f;
+  --blinko-bg-light: #f8fafb;
+  --blinko-bg-white: #ffffff;
+  --blinko-text-primary: #1a1a1a;
+  --blinko-text-secondary: #666666;
+  --blinko-text-tertiary: #999999;
+  --blinko-border: #e8e8e8;
+  --blinko-shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --blinko-shadow-md: 0 4px 16px rgba(0, 0, 0, 0.12);
+  --blinko-shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* ============================================
+   Chat Bubble Button
+   ============================================ */
+
+.blinko-bubble-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 50;
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  animation: slideInUp 0.5s ease-out;
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.blinko-speech-bubble {
+  position: relative;
+  background: var(--blinko-bg-white);
+  padding: 12px 16px;
+  border-radius: 16px;
+  border: 2px solid var(--blinko-primary);
+  max-width: 200px;
+  box-shadow: var(--blinko-shadow-md);
+  animation: slideInRight 0.3s ease-out;
+  margin-bottom: 1.5rem;
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.blinko-speech-text {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--blinko-text-primary);
+  margin: 0;
+  line-height: 1.4;
+}
+
+.blinko-speech-tail {
+  position: absolute;
+  bottom: 23px;
+  right: -8px;
+  width: 12px;
+  height: 12px;
+  background: var(--blinko-bg-white);
+  border-right: 2px solid var(--blinko-primary);
+  border-top: 2px solid var(--blinko-primary);
+  transform: rotate(45deg);
+}
+
+.blinko-button {
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.blinko-button:hover {
+  transform: scale(1.1);
+}
+
+.blinko-button:focus {
+  outline: none;
+}
+
+.blinko-icon {
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.15));
+  width: 80px;
+}
+
+/* ============================================
+   Chat Window
+   ============================================ */
+
+.blinko-chat-window {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 400px;
+  height: 640px;
+  display: flex;
+  flex-direction: column;
+  background: var(--blinko-bg-white);
+  border-radius: 12px;
+  border: 2px solid var(--blinko-primary);
+  box-shadow: var(--blinko-shadow-lg);
+  z-index: 50;
+  overflow: hidden;
+  animation: slideInUp 0.3s ease-out;
+}
+
+/* ============================================
+   Header
+   ============================================ */
+
+.blinko-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  background: linear-gradient(135deg, var(--blinko-primary) 0%, var(--blinko-primary-dark) 100%);
+  color: white;
+  gap: 12px;
+}
+
+.blinko-header-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  min-width: 0;
+}
+
+.blinko-header-avatar {
+  width: 68px;
+  height: 68px;
+  background: var(--blinko-bg-white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.blinko-avatar-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.blinko-header-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.blinko-header-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+  color: white;
+}
+
+.blinko-header-subtitle {
+  font-size: 12px;
+  opacity: 0.9;
+  margin: 4px 0 0 0;
+  color: white;
+}
+
+.blinko-close-button {
+  width: 36px;
+  height: 36px;
+  border: none;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+  flex-shrink: 0;
+}
+
+.blinko-close-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* ============================================
+   Messages Container
+   ============================================ */
+
+.blinko-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+  background: var(--blinko-bg-light);
+}
+
+.blinko-messages::-webkit-scrollbar {
+  width: 6px;
+}
+
+.blinko-messages::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.blinko-messages::-webkit-scrollbar-thumb {
+  background: var(--blinko-border);
+  border-radius: 3px;
+}
+
+.blinko-messages::-webkit-scrollbar-thumb:hover {
+  background: var(--blinko-text-tertiary);
+}
+
+.blinko-messages-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ============================================
+   Message Wrapper
+   ============================================ */
+
+.blinko-message-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.blinko-message-user {
+  align-items: flex-end;
+}
+
+.blinko-message-assistant {
+  align-items: flex-start;
+}
+
+.blinko-message-bubble {
+  display: flex;
+  gap: 8px;
+  align-items: flex-end;
+  max-width: 85%;
+}
+
+.blinko-message-assistant .blinko-message-bubble {
+  flex-direction: row;
+}
+
+.blinko-message-user .blinko-message-bubble {
+  flex-direction: row-reverse;
+}
+
+.blinko-message-avatar {
+  flex-shrink: 0;
+}
+
+.blinko-avatar-small {
+  width: 32px;
+  height: 42px;
+  object-fit: cover;
+}
+
+.blinko-message-text {
+  padding: 12px 16px;
+  border-radius: 16px;
+  font-size: 14px;
+  line-height: 1.5;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+.blinko-message-text p {
+  margin: 0;
+}
+
+.blinko-message-text-user {
+  background: linear-gradient(135deg, var(--blinko-primary) 0%, var(--blinko-primary-dark) 100%);
+  color: white;
+  border-bottom-right-radius: 4px;
+}
+
+.blinko-message-text-assistant {
+  background: var(--blinko-bg-white);
+  color: var(--blinko-text-primary);
+  border: 1px solid var(--blinko-border);
+  border-bottom-left-radius: 4px;
+}
+
+/* ============================================
+   Quick Replies
+   ============================================ */
+
+.blinko-quick-replies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.blinko-quick-reply-button {
+  padding: 8px 12px;
+  border: 2px solid var(--blinko-primary);
+  background: var(--blinko-bg-white);
+  color: var(--blinko-primary);
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.blinko-quick-reply-button:hover {
+  background: var(--blinko-primary);
+  color: white;
+  transform: scale(1.05);
+}
+
+/* ============================================
+   Product Cards
+   ============================================ */
+
+.blinko-product-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.blinko-product-card {
+  display: flex;
+  gap: 12px;
+  padding: 12px;
+  background: var(--blinko-bg-white);
+  border: 1px solid var(--blinko-border);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.blinko-product-card:hover {
+  box-shadow: var(--blinko-shadow-md);
+  border-color: var(--blinko-primary);
+}
+
+.blinko-product-image-wrapper {
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  background: var(--blinko-bg-light);
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.blinko-product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.blinko-product-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.blinko-product-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--blinko-text-primary);
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.blinko-product-description {
+  font-size: 12px;
+  color: var(--blinko-text-secondary);
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.blinko-product-price {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--blinko-primary);
+}
+
+.blinko-product-button {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  padding: 6px 12px;
+  background: var(--blinko-accent);
+  color: var(--blinko-text-primary);
+  border: none;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.blinko-product-button:hover {
+  background: var(--blinko-accent-dark);
+  transform: translateY(-2px);
+}
+
+/* ============================================
+   Loading State
+   ============================================ */
+
+.blinko-loading {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  background: var(--blinko-bg-white);
+  border: 1px solid var(--blinko-border);
+  border-radius: 16px;
+  border-bottom-left-radius: 4px;
+}
+
+.blinko-loading-dot {
+  width: 6px;
+  height: 6px;
+  background: var(--blinko-primary);
+  border-radius: 50%;
+  animation: blinko-bounce 1.4s infinite;
+}
+
+.blinko-loading-dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.blinko-loading-dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes blinko-bounce {
+  0%,
+  80%,
+  100% {
+    opacity: 0.5;
+    transform: translateY(0);
+  }
+  40% {
+    opacity: 1;
+    transform: translateY(-8px);
+  }
+}
+
+.blinko-loading-text {
+  font-size: 12px;
+  color: var(--blinko-text-secondary);
+  margin-left: 4px;
+}
+
+/* ============================================
+   Input Container
+   ============================================ */
+
+.blinko-input-container {
+  padding: 16px;
+  border-top: 1px solid var(--blinko-border);
+  background: var(--blinko-bg-white);
+}
+
+.blinko-input-wrapper {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.blinko-input {
+  flex: 1;
+  padding: 10px 14px;
+  border: 1px solid var(--blinko-border);
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+  transition: all 0.2s ease;
+  background: var(--blinko-bg-white);
+  color: var(--blinko-text-primary);
+}
+
+.blinko-input:focus {
+  outline: none;
+  border-color: var(--blinko-primary);
+  box-shadow: 0 0 0 3px rgba(57, 200, 187, 0.1);
+}
+
+.blinko-input::placeholder {
+  color: var(--blinko-text-tertiary);
+}
+
+.blinko-input:disabled {
+  background: var(--blinko-bg-light);
+  color: var(--blinko-text-tertiary);
+  cursor: not-allowed;
+}
+
+.blinko-send-button {
+  width: 36px;
+  height: 36px;
+  border: none;
+  background: linear-gradient(135deg, var(--blinko-primary) 0%, var(--blinko-primary-dark) 100%);
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.blinko-send-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: var(--blinko-shadow-md);
+}
+
+.blinko-send-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ============================================
+   Responsive Design
+   ============================================ */
+
+@media (max-width: 480px) {
+  .blinko-chat-window {
+    width: calc(100vw - 32px);
+    height: calc(100vh - 120px);
+    max-width: 380px;
+  }
+
+  .blinko-message-bubble {
+    max-width: 90%;
+  }
+
+  .blinko-header {
+    padding: 12px;
+  }
+
+  .blinko-header-avatar {
+    width: 56px;
+    height: 56px;
+  }
+
+  .blinko-header-title {
+    font-size: 16px;
+  }
+
+  .blinko-messages {
+    padding: 12px;
+  }
+
+  .blinko-input-container {
+    padding: 12px;
+  }
+}
