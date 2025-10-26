@@ -18,7 +18,7 @@ WORKDIR /app
 COPY --from=build /app/build ./build
 COPY package*.json server.js ./
 COPY src ./src
-
+COPY . .
 # Cài dependencies backend
 RUN npm install --production
 
