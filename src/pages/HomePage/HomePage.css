@@ -195,6 +195,7 @@
   z-index: 2;
   width: 95%;
   height: auto;
+  object-fit: contain;
   filter: drop-shadow(0 25px 50px rgba(0, 0, 0, 0.15));
 }
 
@@ -210,12 +211,12 @@
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.top-right {
+.floating-indicator.top-right {
   top: 20%;
   right: -5rem;
 }
 
-.bottom-left {
+.floating-indicator.bottom-left {
   bottom: 20%;
   left: -4rem;
 }
@@ -333,6 +334,7 @@
   position: relative;
   max-width: 500px;
   margin: 0 auto;
+  aspect-ratio: 4 / 3;
 }
 
 @keyframes glow-pulse {
@@ -357,16 +359,31 @@
   z-index: 3;
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 1s ease-in-out; 
 }
 
-.top-right {
+@keyframes floatUpDown {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes floatLeftRight {
+  0% { transform: translateX(0px); }
+  50% { transform: translateX(6px); }
+  100% { transform: translateX(0px); }
+}
+
+.floating-indicator.top-right {
   top: 20%;
   right: -3rem;
+  animation: floatUpDown 4s ease-in-out infinite;
 }
 
-.bottom-left {
+.floating-indicator.bottom-left {
   bottom: 20%;
   left: -4rem;
+  animation: floatLeftRight 4s ease-in-out infinite;
 }
 
 .indicator-icon {

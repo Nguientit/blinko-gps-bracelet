@@ -2,17 +2,37 @@ import { useState, useEffect } from "react"
 import Header from "../../components/Header/Header"
 import Footer from "../../components/Footer/Footer"
 import { ArrowRight, Phone, ShieldCheck, Truck, Clock, Mail, Award, Users } from "lucide-react"
+import { motion, AnimatePresence } from "framer-motion";
 import "./HomePage.css"
 
 const HomePage = () => {
   const [isVisible, setIsVisible] = useState(false)
+
+  const bannerImages = [
+    "/img/Banner5.png",
+    "/img/Banner4.png",
+    "/img/Banner3.png",
+    "/img/Banner2.png",
+    "/img/Banner1.png",
+    // Thêm các banner khác nếu có
+  ];
+
+  const [currentBanner, setCurrentBanner] = useState(0);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(true)
     }, 100)
 
-    return () => clearTimeout(timer)
+    // Chuyển banner tự động mỗi 5 giây
+    const bannerInterval = setInterval(() => {
+      setCurrentBanner((prev) => (prev + 1) % bannerImages.length);
+    }, 5000);
+
+    return () => {
+      clearTimeout(timer)
+      clearInterval(bannerInterval)
+    }
   }, [])
   return (
     <div className="homepage">
@@ -68,7 +88,18 @@ const HomePage = () => {
             <div className={`hero-image-container ${isVisible ? "visible" : ""}`}>
               <div className="hero-image-wrapper">
                 <div className="hero-image-glow"></div>
-                <img src="/img/Banner1.png" alt="Blinko GPS Bracelet" className="hero-image" />
+                <AnimatePresence mode="wait">
+                  <motion.img
+                    key={currentBanner}
+                    src={bannerImages[currentBanner]}
+                    alt={`Blinko GPS Bracelet Banner ${currentBanner + 1}`}
+                    className="hero-image"
+                    initial={{ opacity: 0, scale: 1.05 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.98 }}
+                    transition={{ duration: 0.8, ease: "easeInOut" }}
+                  />
+                </AnimatePresence>
 
                 <div className="floating-indicator top-right animate-bounce">
                   <svg className="indicator-icon blue" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
