@@ -3,7 +3,7 @@ import API_BASE_URL from "../config/apiConfig";
 
 const api = axios.create({
   baseURL: API_BASE_URL,
-  withCredentials: true, // nếu bạn dùng cookie JWT
+  withCredentials: true,
 });
 
 export default api;
