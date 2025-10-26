@@ -80,23 +80,6 @@ export const ProfileProvider = ({ children }) => {
     }
   };
 
-  // 🛒 4️⃣ Quản lý đơn hàng user (nên lấy từ API nếu muốn đồng bộ backend)
-  const fetchOrders = async (userId) => {
-    if (!userId) return;
-    try {
-      setLoading(true);
-      const res = await fetch(`/api/orders?userId=${userId}`);
-      if (!res.ok) throw new Error("Không thể tải đơn hàng");
-      const data = await res.json();
-      setOrders(data || []);
-      localStorage.setItem("orders", JSON.stringify(data || []));
-    } catch (err) {
-      console.error("[ProfileContext] Fetch orders error:", err);
-    } finally {
-      setLoading(false);
-    }
-  };
-
   const addOrder = (order) => {
     // Đảm bảo order có userId (đồng bộ với backend)
     if (!order.userId && profile?.id) {
@@ -116,7 +99,6 @@ export const ProfileProvider = ({ children }) => {
         updateProfile,
         orders,
         addOrder,
-        fetchOrders,
         loading,
       }}
     >

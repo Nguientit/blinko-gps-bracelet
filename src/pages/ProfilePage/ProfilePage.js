@@ -10,12 +10,12 @@ import Footer from "../../components/Footer/Footer"
 import "./ProfilePage.css"
 
 const ProfilePage = () => {
-  const { user } = useAuth()
-  const { profile, updateProfile, loading } = useProfile()
+  const { user, initialAuthLoading } = useAuth()
+  const { profile, updateProfile, loading, fetchProfile, initialLoading: profileInitialLoading } = useProfile()
   const navigate = useNavigate()
   const [isEditing, setIsEditing] = useState(false)
   const [formData, setFormData] = useState({
-    name: "",
+    fullName: "",
     email: "",
     phone: "",
     address: {
@@ -27,23 +27,36 @@ const ProfilePage = () => {
   })
 
   useEffect(() => {
-    if (!user) {
+    // Chỉ kiểm tra/chuyển hướng sau khi AuthContext load xong
+    if (!initialAuthLoading && !user) {
       navigate("/auth")
-      return
+      return // Rất quan trọng: Dừng effect nếu redirect
     }
 
-    setFormData({
-      fullName: profile.fullName || "",
-      email: profile.email || "",
-      phone: profile.phone || "",
-      address: profile.address || {
-        street: "",
-        ward: "",
-        district: "",
-        city: "",
-      },
-    })
-  }, [profile, user, navigate])
+    // Nếu đã đăng nhập và chưa có profile trong context (ví dụ sau khi reload), thì gọi API fetchProfile
+    if (!initialAuthLoading && user && !profile && fetchProfile) {
+      fetchProfile(user.id); // Gọi API để lấy profile mới nhất
+    }
+
+  }, [initialAuthLoading, user, profile, navigate, fetchProfile]) // Thêm fetchProfile
+
+  // useEffect để cập nhật formData KHI profile THAY ĐỔI và KHÔNG NULL
+  useEffect(() => {
+    // Chỉ cập nhật form nếu profile đã được load (không null)
+    if (profile) {
+      setFormData({
+        fullName: profile.fullName || "",
+        email: profile.email || "",
+        phone: profile.phone || "",
+        address: profile.address || {
+          street: "",
+          ward: "",
+          district: "",
+          city: "",
+        },
+      })
+    }
+  }, [profile])
 
   const handleInputChange = (e) => {
     const { name, value } = e.target
@@ -83,10 +96,31 @@ const ProfilePage = () => {
     }
   }
 
+  if (initialAuthLoading || profileInitialLoading) {
+    return (
+      <div className="profile-page">
+        <Header />
+        <main className="profile-container" style={{ textAlign: 'center', padding: '50px' }}>
+          <p>Đang tải dữ liệu...</p>
+        </main>
+        <Footer />
+      </div>
+    );
+  }
   if (!user) {
     return null
   }
-
+  if (!profile) {
+    return (
+      <div className="profile-page">
+        <Header />
+        <main className="profile-container" style={{ textAlign: 'center', padding: '50px' }}>
+          <p>Đang tải thông tin chi tiết...</p>
+        </main>
+        <Footer />
+      </div>
+    );
+  }
   return (
     <div className="profile-page">
       <Header />

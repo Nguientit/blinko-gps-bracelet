@@ -98,7 +98,7 @@ export default function BlinkoBot() {
         {
           id: (Date.now() + 1).toString(),
           role: "assistant",
-          content: "Xin lỗi, hệ thống đang bảo trì hoặc chưa cấu hình API chat. Vui lòng thử lại sau! 😅",
+          content: "Xin lỗi, hệ thống đang bảo trì. Vui lòng thử lại sau!",
         },
       ])
     } finally {
@@ -242,7 +242,7 @@ export default function BlinkoBot() {
                 <div className="blinko-message-wrapper blinko-message-assistant">
                   <div className="blinko-message-bubble">
                     <div className="blinko-message-avatar">
-                      <img src="../img/Blinko.png" alt="BlinkoBot" width={20} height={20} className="blinko-avatar-small" />
+                      <img src="../img/Blinko2.png" alt="BlinkoBot" width={20} height={20} className="blinko-avatar-small" />
                     </div>
                     <div className="blinko-loading">
                       <span className="blinko-loading-dot"></span>

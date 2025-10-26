@@ -119,7 +119,7 @@ export const FeedbackProvider = ({ children }) => {
                 addFeedback,
                 updateFeedback,
                 deleteFeedback,
-                checkHasFeedback, // <-- thêm hàm này vào context
+                checkHasFeedback,
             }}
         >
             {children}

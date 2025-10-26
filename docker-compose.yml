@@ -2,13 +2,17 @@ version: "3.9"
 
 services:
   app:
-    build: .
+    image: nguyenpq65/blinko-app:latest
     container_name: gps-bracelet-app
     restart: unless-stopped
     ports:
       - "5000:5000"
     volumes:
       - ./src/data:/app/src/data
+    environment:
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+    env_file:
+      - .env
     networks:
       - webnet
 

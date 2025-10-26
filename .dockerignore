@@ -1,0 +1,24 @@
+# Bỏ qua thư mục node_modules
+node_modules
+
+# Bỏ qua các file build cũ (nếu có)
+build
+dist
+
+# Bỏ qua thư mục .git
+.git
+
+# Bỏ qua các file log npm
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Bỏ qua các file cấu hình local (nếu có)
+.env
+.env*.local
+
+# Bỏ qua file dockerignore chính nó
+.dockerignore
+
+# Thêm các file/thư mục khác bạn không muốn copy vào image
+# ví dụ: ảnh lớn, video, file tạm...

@@ -369,7 +369,7 @@
   background: #d0d0d0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 640px) {
   .orders-container {
     margin-top: 90px;
     padding: 0 6px;

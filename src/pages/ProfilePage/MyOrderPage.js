@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import { useOrder } from "../../contexts/OrderContext"
 import { useProfile } from "../../contexts/ProfileContext"
 import { useNavigate } from "react-router-dom"
 import { ShoppingBag, Calendar, Package, ArrowRight } from "lucide-react"
@@ -10,7 +11,8 @@ import { useFeedback } from "../../contexts/FeedbackContext"
 import "./MyOrderPage.css"
 
 const MyOrderPage = () => {
-  const { profile, initialLoading, orders, fetchOrders, loading: apiLoading } = useProfile()
+  const { orders, fetchOrders, loading: apiLoading, initialLoading } = useOrder()
+  const { profile } = useProfile()
   const navigate = useNavigate()
   const [selectedOrder, setSelectedOrder] = useState(null)
   const [error, setError] = useState(null)
@@ -18,46 +20,26 @@ const MyOrderPage = () => {
   const { checkHasFeedback } = useFeedback()
 
   useEffect(() => {
-    if (!initialLoading && !profile) {
-      navigate("/auth")
-    } else if (!initialLoading && profile && fetchOrders) {
-      fetchOrders(profile.id).catch(err => {
-        console.error("Lỗi tải đơn hàng:", err);
-        setError(err.message || "Không thể tải lịch sử đơn hàng");
-      });
+    // Chỉ gọi fetchOrders khi đã có profile và userId hợp lệ
+    if (!initialLoading && profile && fetchOrders) {
+      const userId =
+        profile?.id ||
+        localStorage.getItem("userId") ||
+        (profile?.userId ? profile.userId : undefined)
+      if (userId) {
+        fetchOrders(userId)
+          .catch(err => {
+            console.error("Lỗi tải đơn hàng:", err);
+            setError(err.message || "Không thể tải lịch sử đơn hàng");
+          });
+      } else {
+        setError("Không tìm thấy thông tin người dùng. Vui lòng đăng nhập lại.");
+      }
     }
-  }, [initialLoading, profile, navigate, fetchOrders])
-
-  // useEffect(() => {
-  //   const fetchOrders = async () => {
-  //     try {
-  //       setLoading(true)
-  //       setError(null)
-  //       // Lấy đúng danh sách đơn hàng theo userId
-  //       const userId = profile?.id || localStorage.getItem("userId")
-  //       if (!userId) {
-  //         setOrders([])
-  //         setLoading(false)
-  //         return
-  //       }
-  //       const res = await fetch(`/api/orders?userId=${userId}`)
-  //       if (!res.ok) {
-  //         throw new Error("Không thể tải lịch sử đơn hàng")
-  //       }
-  //       const data = await res.json()
-  //       setOrders(data)
-  //     } catch (err) {
-  //       console.error("Lỗi tải đơn hàng:", err)
-  //       setError(err.message)
-  //     } finally {
-  //       setLoading(false)
-  //     }
-  //   }
-
-  //   if (profile) {
-  //     fetchOrders()
-  //   }
-  // }, [profile])
+    if (!initialLoading && !profile) {
+      navigate("/auth");
+    }
+  }, [initialLoading, profile, fetchOrders, navigate])
 
   useEffect(() => {
     const runCheck = async () => {

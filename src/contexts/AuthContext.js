@@ -15,20 +15,21 @@ export const useAuth = () => {
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null)
   const [loading, setLoading] = useState(true)
+  const [initialAuthLoading, setInitialAuthLoading] = useState(true);
 
-  useEffect(() => {
-    // Check if user is logged in from localStorage
-    const savedUser = localStorage.getItem("user")
-    if (savedUser) {
+useEffect(() => {
+    setInitialAuthLoading(true); // Bắt đầu load
+    // Kiểm tra localStorage hoặc API để xác định user ban đầu
+    const storedUser = localStorage.getItem('user'); // Hoặc cách bạn lưu user
+    if (storedUser) {
       try {
-        setUser(JSON.parse(savedUser))
-      } catch (error) {
-        console.error("Error parsing saved user:", error)
-        localStorage.removeItem("user")
+        setUser(JSON.parse(storedUser));
+      } catch (e) {
+        localStorage.removeItem('user');
       }
     }
-    setLoading(false)
-  }, [])
+    setInitialAuthLoading(false); // Đánh dấu load xong
+  }, []);
 
   const login = async ({ login, password }) => {
     // Gọi API backend mới thay vì đọc database.json trực tiếp
@@ -88,6 +89,7 @@ export const AuthProvider = ({ children }) => {
     logout,
     loading,
     isAuthenticated: !!user,
+    initialAuthLoading
   }
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>

@@ -9,9 +9,18 @@ const databaseFilePath = path.join(__dirname, "../data/database.json");
 const readDB = async () => {
     try {
         const data = await fs.readFile(databaseFilePath, "utf-8");
-        return JSON.parse(data);
+        const jsonData = JSON.parse(data);
+        return {
+            ...jsonData,
+            feedback: Array.isArray(jsonData.feedback) ? jsonData.feedback : []
+        };
     } catch (err) {
-        return { feedback: [] };
+        if (err.code === 'ENOENT') {
+            // Trả về cấu trúc rỗng đầy đủ
+            return { feedback: [] };
+        }
+        console.error("Lỗi đọc hoặc parse database.json:", err);
+        throw new Error("Không thể đọc dữ liệu database.");
     }
 };
 
@@ -108,17 +117,18 @@ router.delete("/:id", async (req, res) => {
 });
 
 router.get("/check/:email", async (req, res) => {
+    console.log(`--- GET /check/${req.params.email} called ---`); // Log khi route được gọi
     try {
-        const { email } = req.params
-        const db = await readDB(); // Dùng helper
-        const feedbacks = db.feedback || []
-
-        const userFeedback = feedbacks.find((f) => f.userEmail === email)
-        res.json({ hasFeedback: !!userFeedback })
+        const { email } = req.params;
+        const db = await readDB();
+        const feedbacks = Array.isArray(db.feedback) ? db.feedback : [];
+        const userFeedback = feedbacks.find((f) => f.userEmail === email);
+        res.json({ hasFeedback: !!userFeedback });
     } catch (err) {
-        console.error(err)
-        res.status(500).json({ message: "Không thể kiểm tra đánh giá." })
+        // Log lỗi xảy ra trong route handler (bao gồm lỗi từ readDB)
+        console.error("--- GET /check ERROR:", err.message, err.stack);
+        res.status(500).json({ message: err.message || "Không thể kiểm tra đánh giá." });
     }
-})
+});
 
 module.exports = router;

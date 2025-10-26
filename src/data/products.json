@@ -1,358 +1,78 @@
-{
-  "product_detail": [
-    {
-      "id": "1",
-      "name": "Blinko Play",
-      "category": "accessories",
-      "price": 152000,
-      "image": "https://down-vn.img.susercontent.com/file/cn-11134207-7ras8-m6o6k67lkzgr65.webp",
-      "description": "Dây silicon trơn dành cho đồng hồ Blinko – bền, nhẹ, thoáng khí.",
-      "features": [
-        "Chất liệu silicon cao cấp",
-        "Thoải mái khi đeo",
-        "Nhiều màu trẻ trung"
-      ],
-      "stock": 50,
-      "variants": [
-        {
-          "name": "Play Black",
-          "image": "https://down-vn.img.susercontent.com/file/cn-11134207-7ras8-m6o6oga42xgoe6@resize_w900_nl.webp",
-          "price": 152000,
-          "stock": 8
-        },
-        {
-          "name": "Play Blue",
-          "image": "https://down-vn.img.susercontent.com/file/cn-11134207-7ras8-m6o6oga42xe3c3@resize_w900_nl.webp",
-          "price": 152000,
-          "stock": 10
-        },
-        {
-          "name": "Play Grass",
-          "image": "https://down-vn.img.susercontent.com/file/cn-11134207-7ras8-m6o6ohis9k2wfe@resize_w900_nl.webp",
-          "price": 152000,
-          "stock": 14
-        },
-        {
-          "name": "Play Purple",
-          "image": "https://down-vn.img.susercontent.com/file/cn-11134207-7ras8-m6o6oki5wf6wd8@resize_w900_nl.webp",
-          "price": 152000,
-          "stock": 2
-        },
-        {
-          "name": "Play Pink",
-          "image": "https://down-vn.img.susercontent.com/file/cn-11134207-7ras8-m6o6ol9ms80bf2@resize_w900_nl.webp",
-          "price": 152000,
-          "stock": 6
-        },
-        {
-          "name": "Play White",
-          "image": "https://down-vn.img.susercontent.com/file/cn-11134207-7ras8-m6o6omo4qbqgd7@resize_w900_nl.webp",
-          "price": 152000,
-          "stock": 1
-        },
-        {
-          "name": "Play Yellow",
-          "image": "https://down-vn.img.susercontent.com/file/cn-11134207-7ras8-m6o6onlpd6yz0f@resize_w900_nl.webp",
-          "price": 152000,
-          "stock": 12
-        }
-      ]
-    },
-    {
-      "id": "2",
-      "name": "Blinko Toons",
-      "category": "accessories",
-      "price": 142000,
-      "image": "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-m07hou0jpjhp15.webp",
-      "description": "Dây silicon có hình hoạt hình vui nhộn – phù hợp cho trẻ em và teen.",
-      "features": [
-        "Silicon dẻo cao cấp",
-        "Họa tiết dễ thương",
-        "Thoáng khí, dễ vệ sinh"
-      ],
-      "stock": 60,
-      "variants": [
-        {
-          "name": "Toons Dino",
-          "image": "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lusx1wia9qfm82@resize_w900_nl.webp",
-          "price": 142000,
-          "stock": 15
-        },
-        {
-          "name": "Toons Car",
-          "image": "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lusx1wiab50260@resize_w900_nl.webp",
-          "price": 142000,
-          "stock": 20
-        },
-        {
-          "name": "Toons Shark",
-          "image": "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lusx1wiacjki72@resize_w900_nl.webp",
-          "price": 142000,
-          "stock": 10
-        },
-        {
-          "name": "Toons Pony",
-          "image": "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lusx1wiady4y07@resize_w900_nl.webp",
-          "price": 142000,
-          "stock": 20
-        },
-        {
-          "name": "Toons Rainbow",
-          "image": "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lusx1wiafcpecd@resize_w900_nl.webp",
-          "price": 142000,
-          "stock": 6
-        },
-        {
-          "name": "Toons Donut",
-          "image": "https://down-vn.img.susercontent.com/file/vn-11134207-7ras8-maqn1fbgovcx16@resize_w900_nl.webp",
-          "price": 142000,
-          "stock": 0
-        },
-        {
-          "name": "Toons Astronaut",
-          "image": "https://down-vn.img.susercontent.com/file/vn-11134207-7ras8-maqn1gqim5xo01@resize_w900_nl.webp",
-          "price": 142000,
-          "stock": 8
-        }
-      ]
-    },
-    {
-      "id": "4",
-      "name": "Blinko Active",
-      "category": "accessories",
-      "price": 191000,
-      "image": "https://i.postimg.cc/Znhj8VHm/Blinko-Active.png",
-      "description": "Dây vải dù có hình – bền, năng động, phong cách thể thao.",
-      "features": [
-        "Chất liệu vải dù cao cấp",
-        "Khóa chắc chắn",
-        "Mềm nhẹ thoáng khí"
-      ],
-      "stock": 40,
-      "variants": [
-        {
-          "name": "Active Pink Pony",
-          "image": "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lxcuv4a4fkrdf5@resize_w900_nl.webp",
-          "price": 191000,
-          "stock": 30
-        },
-        {
-          "name": "Active Yellow Dinosaur",
-          "image": "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lxcuv5zzyfh7cc@resize_w900_nl.webp",
-          "price": 191000,
-          "stock": 20
-        },
-        {
-          "name": "Active Blue Shark",
-          "image": "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lxcuv7th97fd2b@resize_w900_nl.webp",
-          "price": 191000,
-          "stock": 10
-        },
-        {
-          "name": "Active Black Rocket",
-          "image": "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lxcuv9hysonv21@resize_w900_nl.webp",
-          "price": 191000,
-          "stock": 12
-        }
-      ]
-    },
-    {
-      "id": "5",
-      "name": "Blinko Essential",
-      "category": "accessories",
-      "price": 182000,
-      "image": "https://down-vn.img.susercontent.com/file/6fb4a5eb4c08adeeb4049a0f246bfd01.webp",
-      "description": "Dây vải dù velcro trơn – nhẹ, bám chắc, dễ điều chỉnh.",
-      "features": [
-        "Chất liệu bền bỉ",
-        "Khóa velcro tiện dụng",
-        "Thoải mái khi đeo"
-      ],
-      "stock": 100,
-      "variants": [
-        {
-          "name": "Essential Rainbow",
-          "image": "https://down-vn.img.susercontent.com/file/89c22c9568fad224cb97470166d2b9a6@resize_w900_nl.webp",
-          "price": 182000,
-          "stock": 15
-        },
-        {
-          "name": "Essential Pink",
-          "image": "https://down-vn.img.susercontent.com/file/c06578d33d983fb11929e936d1bc2e1b@resize_w900_nl.webp",
-          "price": 182000,
-          "stock": 15
-        },
-        {
-          "name": "Essential White",
-          "image": "https://down-vn.img.susercontent.com/file/sg-11134201-23020-fnfvuv6ednnva9@resize_w900_nl.webp",
-          "price": 182000,
-          "stock": 15
-        },
-        {
-          "name": "Essential Blue",
-          "image": "https://down-vn.img.susercontent.com/file/e506c8afa352be0a5c7e984c775d7202@resize_w900_nl.webp",
-          "price": 182000,
-          "stock": 15
-        },
-        {
-          "name": "Essential Black",
-          "image": "https://down-vn.img.susercontent.com/file/22ee2ceb952d93b1fdea03ef3a474268@resize_w900_nl.webp",
-          "price": 182000,
-          "stock": 15
-        },
-        {
-          "name": "Essential Rainbow Special",
-          "image": "https://down-vn.img.susercontent.com/file/5ac5002dd3636038de1569c121abbf66@resize_w900_nl.webp",
-          "price": 182000,
-          "stock": 10
-        }
-      ]
-    },
-    {
-      "id": "6",
-      "name": "Blinko Fit",
-      "category": "accessories",
-      "price": 168000,
-      "image": "https://postimg.cc/CdYWMbQV",
-      "description": "Dây vải dù trơn – phong cách tối giản, phù hợp mọi lứa tuổi.",
-      "features": [
-        "Thoáng khí",
-        "Độ bền cao",
-        "Đa dạng màu sắc"
-      ],
-      "stock": 30,
-      "variants": [
-        {
-          "name": "Fit StarLight",
-          "image": "https://down-vn.img.susercontent.com/file/cn-11134207-7ras8-mb6dl3qow3t17a.webp",
-          "price": 168000,
-          "stock": 15
-        },
-        {
-          "name": "Fit Blue",
-          "image": "https://down-vn.img.susercontent.com/file/cn-11134207-7ras8-mb6dl86ie89100.webp",
-          "price": 168000,
-          "stock": 15
-        },
-        {
-          "name": "Fit Pink",
-          "image": "https://down-vn.img.susercontent.com/file/cn-11134207-7ras8-mb6dlhyc3d8954.webp",
-          "price": 168000,
-          "stock": 15
-        },
-        {
-          "name": "Fit Red",
-          "image": "https://down-vn.img.susercontent.com/file/cn-11134207-7ras8-mb6dlt1lv39h4d.webp",
-          "price": 168000,
-          "stock": 15
-        },
-        {
-          "name": "Fit Black",
-          "image": "https://down-vn.img.susercontent.com/file/cn-11134207-7ras8-mb6dltzghjyddc.webp",
-          "price": 168000,
-          "stock": 15
-        },
-        {
-          "name": "Fit Green",
-          "image": "https://down-vn.img.susercontent.com/file/cn-11134207-7ras8-mb6dg4i96gqt46.webp",
-          "price": 168000,
-          "stock": 15
-        },
-        {
-          "name": "Fit Grey",
-          "image": "https://down-vn.img.susercontent.com/file/cn-11134207-7ras8-mb6dm73favnd7a.webp",
-          "price": 168000,
-          "stock": 10
-        },
-        {
-          "name": "Fit Purple",
-          "image": "https://down-vn.img.susercontent.com/file/cn-11134207-7ras8-mb6dmdlvrscla5.webp",
-          "price": 168000,
-          "stock": 10
-        }
-      ]
-    }
-  ],
-  "products": [
-    {
-      "id": "1",
-      "name": "Blinko Play",
-      "category": "kids",
-      "price": 140000,
-      "image": "https://down-vn.img.susercontent.com/file/cn-11134207-7ras8-m6o6k67lkzgr65.webp",
-      "description": "Định vị thông minh kèm dây silicon trơn dành cho đồng hồ Blinko – bền, nhẹ, thoáng khí.",
-      "features": [
-        "GPS chính xác",
-        "Chống nước IP67",
-        "Phù hợp mọi lứa tuổi",
-        "Pin 9-12 tháng"
-      ],
-      "ageGroup": "4-12 tuổi",
-      "stock": 50
-    },
-    {
-      "id": "2",
-      "name": "Blinko Toons",
-      "category": "kids",
-      "price": 152000,
-      "image": "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-m07hou0jpjhp15.webp",
-      "description": "Vòng đeo tay định vị thông minh cho thanh thiếu niên",
-      "features": [
-        "GPS chính xác",
-        "Chống nước IP67",
-        "Phù hợp mọi lứa tuổi",
-        "Pin 9-12 tháng"
-      ],
-      "ageGroup": "4-12 tuổi",
-      "stock": 20
-    },
-    {
-      "id": "4",
-      "name": "Blinko Active",
-      "category": "kids",
-      "price": 191000,
-      "image": "https://i.postimg.cc/Znhj8VHm/Blinko-Active.png",
-      "description": "Dây vải dù có hình – bền, năng động, phong cách thể thao",
-      "features": [
-        "Siêu nhỏ gọn",
-        "Pin 12 tháng",
-        "Chống nước IP67",
-        "GPS chính xác"
-      ],
-      "ageGroup": "3-8 tuổi",
-      "stock": 10
-    },
-    {
-      "id": "5",
-      "name": "Blinko Essential",
-      "category": "teen",
-      "price": 182000,
-      "image": "https://down-vn.img.susercontent.com/file/6fb4a5eb4c08adeeb4049a0f246bfd01.webp",
-      "description": "Dây vải dù velcro trơn – nhẹ, bám chắc, dễ điều chỉnh.",
-      "features": [
-        "Dễ sử dụng",
-        "Màu sắc vui nhộn",
-        "Thiết kế thời trang",
-        "Pin 9-12 tháng"
-      ],
-      "ageGroup": "13-18 tuổi",
-      "stock": 60
-    },
-    {
-      "id": "6",
-      "name": "Blinko Fit",
-      "category": "teen",
-      "price": 168000,
-      "image": "https://i.postimg.cc/BZ1sgg5t/Blinko-Fit.png",
-      "description": "Dây vải dù trơn – phong cách tối giản, phù hợp mọi lứa tuổi",
-      "features": [
-        "GPS chính xác",
-        "Chống nước IP67",
-        "Phù hợp mọi lứa tuổi",
-        "Pin 9-12 tháng"
-      ],
-      "ageGroup": "12-18 tuổi",
-      "stock": 80
-    }
-  ]
-}
+[
+  {
+    "id": "1",
+    "name": "Blinko Play",
+    "category": "accessories",
+    "price": 152000,
+    "image": "https://down-vn.img.susercontent.com/file/cn-11134207-7ras8-m6o6k67lkzgr65.webp",
+    "description": "Dây silicon trơn thay thế cho đồng hồ Blinko – bền, nhẹ, thoáng khí.",
+    "features": [
+      "Chất liệu silicon cao cấp",
+      "Thoải mái khi đeo",
+      "Nhiều màu trẻ trung"
+    ],
+    "stock": 50
+  },
+  {
+    "id": "2",
+    "name": "Blinko Toons",
+    "category": "accessories",
+    "price": 142000,
+    "image": "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-m07hou0jpjhp15.webp",
+    "description": "Dây silicon thay thế có hình hoạt hình vui nhộn – phù hợp cho trẻ em và teen.",
+    "features": [
+      "Silicon dẻo cao cấp",
+      "Họa tiết dễ thương",
+      "Thoáng khí, dễ vệ sinh"
+    ],
+    "stock": 60
+  },
+  {
+    "id": "4",
+    "name": "Blinko Active",
+    "category": "kids",
+    "price": 191000,
+    "image": "https://i.postimg.cc/Znhj8VHm/Blinko-Active.png",
+    "description": "Đồng hồ định vị cho bé (3-8 tuổi) siêu nhỏ gọn, pin 12 tháng, chống nước IP67 và định vị GPS chính xác.",
+    "features": [
+      "Siêu nhỏ gọn",
+      "Pin 12 tháng",
+      "Chống nước IP67",
+      "GPS chính xác"
+    ],
+    "ageGroup": "3-8 tuổi",
+    "stock": 10
+  },
+  {
+    "id": "5",
+    "name": "Blinko Essential",
+    "category": "teen",
+    "price": 182000,
+    "image": "https://down-vn.img.susercontent.com/file/6fb4a5eb4c08adeeb4049a0f246bfd01.webp",
+    "description": "Đồng hồ thông minh cho teen (13-18 tuổi), thiết kế thời trang, dễ sử dụng, pin bền 9-12 tháng.",
+    "features": [
+      "Dễ sử dụng",
+      "Màu sắc vui nhộn",
+      "Thiết kế thời trang",
+      "Pin 9-12 tháng"
+    ],
+    "ageGroup": "13-18 tuổi",
+    "stock": 60
+  },
+  {
+    "id": "6",
+    "name": "Blinko Fit",
+    "category": "teen",
+    "price": 168000,
+    "image": "https://i.postimg.cc/BZ1sgg5t/Blinko-Fit.png",
+    "description": "Đồng hồ định vị GPS cho lứa tuổi teen (12-18 tuổi), chống nước IP67, pin bền bỉ và phong cách tối giản.",
+    "features": [
+      "GPS chính xác",
+      "Chống nước IP67",
+      "Phù hợp mọi lứa tuổi",
+      "Pin 9-12 tháng"
+    ],
+    "ageGroup": "12-18 tuổi",
+    "stock": 80
+  }
+]
