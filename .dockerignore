@@ -2,7 +2,7 @@
 node_modules
 
 # Bỏ qua các file build cũ (nếu có)
-build
+#build
 dist
 
 # Bỏ qua thư mục .git

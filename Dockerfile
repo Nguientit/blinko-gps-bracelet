@@ -8,7 +8,7 @@ RUN npm install
 
 # Copy toàn bộ source và build React
 COPY . .
-RUN npm run build
+COPY build/ ./build
 
 # --- Stage 2: runtime Node ---
 FROM node:18-alpine
