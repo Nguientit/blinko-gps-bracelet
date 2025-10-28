@@ -17,6 +17,7 @@ import BlinkoBot from "./pages/BlinkoBot/BlinkoBot"
 import ProfilePage from "./pages/ProfilePage/ProfilePage"
 import MyOrderPage from "./pages/ProfilePage/MyOrderPage"
 import AdminDashboard from "./pages/AdminPages/AdminDashBoard"
+import TutorialPage from "./pages/TutorialPages/TutorialPage"
 import ScrollToTop from "./components/ScrollToTop"
 import "./App.css"
 
@@ -51,6 +52,12 @@ function App() {
                             <BlinkoBot />
                           </>
                         } />
+                        <Route path="/tutorial" element={
+                          <>
+                            <TutorialPage />
+                            <BlinkoBot />
+                          </>
+                        } />
                         <Route path="/auth" element={<AuthPage />} />
                         <Route path="/cart" element={<CartPage />} />
                         <Route path="/checkout" element={<CheckoutPage />} />
@@ -58,6 +65,7 @@ function App() {
                         <Route path="/profile" element={<ProfilePage />} />
                         <Route path="/myorder" element={<MyOrderPage />} />
                         <Route path="/admin/dashboard" element={<AdminDashboard />} />
+
                       </Routes>
                     </div>
                   </Router>
