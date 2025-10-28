@@ -86,7 +86,11 @@ const FooterSection = ({ section }) => {
         {section.items.map((item, index) => (
           <li key={index}>
             {typeof item === "string" ? (
-              <a href="#">{item}</a>
+              item === "Hướng dẫn sử dụng" ? (
+                <a href="/tutorial">{item}</a>
+              ) : (
+                <a href="#">{item}</a>
+              )
             ) : (
               <a href={item.url} target="_blank" rel="noopener noreferrer">
                 {item.label}
@@ -98,5 +102,6 @@ const FooterSection = ({ section }) => {
     </div>
   )
 }
+
 
 export default Footer

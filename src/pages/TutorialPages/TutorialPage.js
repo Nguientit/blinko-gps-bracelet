@@ -83,7 +83,7 @@ export default function TutorialPage() {
             <header className="tutorial-header">
                 <div className="tutorial-container">
                     <h1 className="tutorial-page-title">Hướng dẫn sử dụng Blinko</h1>
-                    <p className="tutorial-page-subtitle">Theo dõi 9 bước đơn giản để thiết lập thiết bị của bạn</p>
+                    <p className="tutorial-page-subtitle">Theo dõi 10 bước đơn giản để thiết lập thiết bị Blinko cho bé nha</p>
                 </div>
             </header>
 
@@ -172,7 +172,7 @@ export default function TutorialPage() {
                             Nếu bạn gặp bất kỳ vấn đề nào trong quá trình cài đặt, vui lòng liên hệ với chúng tôi.
                         </p>
                         <div className="cta-buttons">
-                            <Link href="/products" className="cta-button primary">
+                            <Link to="/products" className="cta-button primary">
                                 Mua Blinko ngay
                             </Link>
                             <a

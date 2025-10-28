@@ -248,14 +248,19 @@ const HomePage = () => {
             </p>
 
             <div className="cta-buttons">
-              <button className="btn btn-light btn-lg">
+              <Link to="/products" className="btn btn-light btn-lg">
                 Đặt hàng ngay
                 <ArrowRight className="btn-icon" size={20} />
-              </button>
-              <button className="btn btn-outline-light btn-lg">
+              </Link>
+              <a
+                href="https://www.facebook.com/profile.php?id=61581991141698"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="cta-button secondary"
+              >
                 Liên hệ tư vấn
                 <Phone className="btn-icon" size={20} />
-              </button>
+              </a>
             </div>
 
             <div className="cta-features">
