@@ -105,6 +105,7 @@ export default function OrderManager() {
             <tr>
               <th>Mã đơn</th>
               <th>Khách hàng</th>
+              <th>Số điện thoại</th>
               <th>Địa chỉ</th>
               <th>Thanh toán</th>
               <th>Trạng thái</th>
@@ -124,6 +125,7 @@ export default function OrderManager() {
                       <div className="customer-email">{o.email}</div>
                     </div>
                   </td>
+                  <td>{o.phone || "—"}</td>
                   <td>{o.address}</td>
                   <td>{o.payment}</td>
                   <td>
